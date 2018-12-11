@@ -6,10 +6,28 @@
     </head>
     <body>
         <h1>Boards</h1>
-
-        {% for board in boards %}
-            {{ board.name }} <br>
-        {% endfor %}
-        
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Board</th>
+                    <th>Posts</th>
+                    <th>Topics</th>
+                    <th>Last Post</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for board in boards %}
+                <tr>
+                    <td>
+                       {{ board.name }} <br>
+                       <small style="color: #888;">{{ board.descrption }}</small>
+                    </td>
+                    <td>0</td>
+                    <td>0</td>
+                    <td></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
     </body>
 </html>
